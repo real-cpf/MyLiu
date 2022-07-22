@@ -28,6 +28,7 @@ public class Account extends system.proxies.User
 		FailedLogins("FailedLogins"),
 		WebServiceUser("WebServiceUser"),
 		IsAnonymous("IsAnonymous"),
+		Telnet_Account("DataAuth.Telnet_Account"),
 		UserRoles("System.UserRoles"),
 		User_Language("System.User_Language"),
 		User_TimeZone("System.User_TimeZone");
@@ -201,6 +202,53 @@ public class Account extends system.proxies.User
 	public final void setIsLocalUser(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean islocaluser)
 	{
 		getMendixObject().setValue(context, MemberNames.IsLocalUser.toString(), islocaluser);
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of Telnet_Account
+	 */
+	public final dataauth.proxies.Telnet getTelnet_Account() throws com.mendix.core.CoreException
+	{
+		return getTelnet_Account(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Telnet_Account
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final dataauth.proxies.Telnet getTelnet_Account(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		dataauth.proxies.Telnet result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Telnet_Account.toString());
+		if (identifier != null) {
+			result = dataauth.proxies.Telnet.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of Telnet_Account
+	 * @param telnet_account
+	 */
+	public final void setTelnet_Account(dataauth.proxies.Telnet telnet_account)
+	{
+		setTelnet_Account(getContext(), telnet_account);
+	}
+
+	/**
+	 * Set value of Telnet_Account
+	 * @param context
+	 * @param telnet_account
+	 */
+	public final void setTelnet_Account(com.mendix.systemwideinterfaces.core.IContext context, dataauth.proxies.Telnet telnet_account)
+	{
+		if (telnet_account == null) {
+			getMendixObject().setValue(context, MemberNames.Telnet_Account.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.Telnet_Account.toString(), telnet_account.getMendixObject().getId());
+		}
 	}
 
 	@java.lang.Override

@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.14.1.46860/runtime/bundles/com.mendix.public-api.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.14.1.46860/runtime/bundles/javax.servlet-api.servlet.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.14.1.46860/runtime/bundles/javax.websocket-api.websocket.jar"/>
+	<classpathentry kind="lib" path="userlib/gson-2.9.0.jar"/>
 	<classpathentry kind="output" path="deployment/run/bin"/>
 </classpath>
